@@ -1,4 +1,3 @@
-
 class Transaction {
   String status;
   String user;
@@ -10,5 +9,11 @@ class Transaction {
   // int favoriteCount;
 
   Transaction(this.status, this.user, this.icon, this.amont, this.city,
-      this.date);
+      this.date, );
+}
+
+class FormData {
+  String email;
+  String password;
+  FormData(this.email, this.password);
 }

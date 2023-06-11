@@ -29,10 +29,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: mainAppColor
-      ),
-      home: TransactionListScreen(),
+      theme: ThemeData(primarySwatch: mainAppColor),
+      initialRoute: '/',
+      routes: {
+        TransactionListScreen.transactionListScreen:(context) => TransactionListScreen(),
+        TransactionScreen.transactionScreenPage:(context) => TransactionScreen(),
+      },
+      // home: TransactionListScreen(),
     );
   }
 }
